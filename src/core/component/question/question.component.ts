@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class QuestionComponent implements OnInit {
 
   constructor() { }
+  isQuestionOpen: boolean = false;
 
+  toggleMenu() {
+    this.isQuestionOpen = !this.isQuestionOpen;
+  }
   ngOnInit(): void {
   }
 

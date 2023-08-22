@@ -2,18 +2,48 @@
     <header class="text-center w-80 mx-auto">
         <h2 class=" font-bold text-title sm:text-3xl py-8">
             ĐĂNG KÝ VÀ NẠP SIÊU DỄ DÀNG
-            <p class="border-b-4 border-orange-600 my-6 w-1/5 mx-auto"></p>
+            <p class="border-b-4 border-orange-600 mt-6 w-1/5 mx-auto"></p>
         </h2>
     </header>
     <p class="max-w-md mx-auto mt-4 text-gray-500 text-center">
         U -Money cung cấp cho Khách hàng những sản phẩm với tính năng nổi trội.
     </p>
-    <div class="mt-8 mx-80 m-auto">
-        <header class="flex justify-between items-center text-center font-sans font-semibold">
-            <button class="w-64 py-3 px-5 bg-orange-600  text-white rounded-xl">Đăng ký/Đăng nhập</button>
-            <button class="w-64 py-3 px-5 bg-white text-black rounded-xl">Nạp tiền vào U-Money</button>
-            <button class="w-64 py-3 px-5 bg-white text-black rounded-xl">Kích hoạt</button>
-        </header>
+    <div class="mt-8 lg:mx-80 m-auto">
+
+        <div id="myTabContent">
+            <div id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            </div>
+            <div id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            </div>
+            <div id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center ml-5 text-center font-sans font-semibold ">
+            <ul class="gap-5 md:flex flex-wrap text-sm font-medium text-center mx-auto" id="myTab"
+                data-tabs-toggle="#myTabContent" role="tablist">
+                <li class="lg:mr-2" role="presentation">
+                    <button
+                        class="w-40 px-2 py-2 lg:w-64 lg:py-3 lg:px-5 text-gray-900 bg-white rounded-xl focus:bg-orange-500 focus:text-white active hover:bg-orange-500 hover:text-white drop-shadow-lg"
+                        id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+                        aria-selected="true">Đăng ký/Đăng
+                        nhập</button>
+                </li>
+                <li class="lg:mr-2" role="presentation">
+                    <button
+                        class="w-40 my-3 md:my-0 py-2 lg:w-64 lg:py-3 lg:px-5 bg-white text-gray-900 rounded-xl  focus:bg-orange-500 focus:text-white active hover:bg-orange-500 hover:text-white drop-shadow-lg"
+                        id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                        aria-controls="dashboard" aria-selected="true">Nạp tiền vào U-Money</button>
+                </li>
+                <li class=" lg:mr-2" role="presentation">
+                    <button
+                        class="w-40 px-2 py-2 lg:w-64 lg:py-3 lg:px-5 bg-white text-gray-900 rounded-xl  focus:bg-orange-500 focus:text-white active hover:bg-orange-500 hover:text-white drop-shadow-lg"
+                        id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
+                        aria-selected="true">Kích hoạt</button>
+                </li>
+            </ul>
+        </div>
+
         <div class="mx-auto pt-10 grid grid-cols-3 gap-4">
             <img src="../../../assets/phone.svg" alt="" srcset="" class="mx-auto">
             <div class="col-span-2">

@@ -1,4 +1,4 @@
-<header class="bg-white fixed top-0 left-0 right-0 z-10">
+<header class="bg-white">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="flex-1 md:flex md:items-center md:space-x-12">
@@ -8,9 +8,9 @@
                 </a>
             </div>
 
-            <div class="md:flex md:items-center md:space-x-6">
-                <nav aria-label="Global" class="hidden md:block border-r-2 pr-4 border-black font-medium font-roboto">
-                    <ul class="flex items-center space-x-6 text-base">
+            <div class="md:flex md:items-center md:gap-12">
+                <nav aria-label="Global" class="hidden lg:block border-r-2 pr-4 border-black font-medium font-roboto">
+                    <ul class="flex items-center gap-6 text-sm">
                         <li>
                             <a class="text-black transition hover:text-gray-500/75" href="/">
                                 Giới thiệu
@@ -43,7 +43,7 @@
                     </ul>
                 </nav>
 
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center gap-4">
                     <div class="sm:flex space-x-4">
                         <a href="" class="rounded-md my-2.5 text-sm font-medium shadow">
                             <img src="../../../assets/Logo-languge.svg" alt="">
@@ -55,7 +55,111 @@
                             </button>
                         </div>
                     </div>
+
+                    <!-- hiện menu -->
+                    <div class="block lg:hidden">
+                        <button (click)="toggleMenu()"
+                            class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
+                <nav *ngIf="isMenuOpen" aria-label="Global"
+                    class="lg:hidden border-r-2 pr-4 border-black font-medium font-roboto">
+                    <ul class="flex items-center gap-6 text-sm">
+                        <li>
+                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                Giới thiệu
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                Sản phẩm
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                Dịch vụ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                Tin tức
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-black transition hover:text-gray-500/75" href="/">
+                                Hỗ trợ
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <!-- menu hiện -->
+
+
+                <div *ngIf="isMenuOpen" class="lg:hidden" role="dialog" aria-modal="true">
+                    <div
+                        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                        <div class="lg:hidden">
+                            <button (click)="toggleMenu()"
+                                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+
+
+
+                        <div class="mt-6 flow-root">
+                            <div class="-my-6 divide-y divide-gray-500/10">
+                                <ul class="leading-9">
+                                    <li>
+                                        <a class="text-black transition hover:text-gray-500/75" href="/">
+                                            Giới thiệu
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="text-black transition hover:text-gray-500/75" href="/">
+                                            Sản phẩm
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="text-black transition hover:text-gray-500/75" href="/">
+                                            Dịch vụ
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="text-black transition hover:text-gray-500/75" href="/">
+                                            Tin tức
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="text-black transition hover:text-gray-500/75" href="/">
+                                            Hỗ trợ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
